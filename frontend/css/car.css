@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #efedd6;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.nav-bar {
+    background-color: rgb(129, 210, 204);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 60px;
+}
+
+.nav-head {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-inputs {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-inputs input {
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    border: 0.5px solid black;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.nav-inputs button {
+    width: 45px;
+    height: 35px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-nav a {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sub-nav a:hover {
+    color: #333;
+}
+
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ================= CAR SECTION ================= */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f6f5f0;
+}
+
+.box {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 15px;
+}
+
+.car-info h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.car-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d35400;
+    margin-bottom: 5px;
+}
+
+.car-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* ================= SCROLL EFFECT ================= */
+.box {
+    transform: translateX(400%);
+    transition: transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+
+.contact-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #218838;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
+
+    .nav-inputs {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .sub-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: rgb(129, 210, 204);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .sub-nav.active {
+        display: flex;
+    }
+}

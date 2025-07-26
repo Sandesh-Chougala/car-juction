@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+    font-family: sans-serif;
+}
+
+/* Navbar styling */
+.nav-bar {
+    background-color: rgb(129, 210, 204);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 60px;
+}
+
+.nav-head {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: black;
+}
+
+.nav-inputs {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-inputs input {
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    border: 0.5px solid black;
+    border-radius: 8px 0 0 8px;
+}
+
+.nav-inputs button {
+    width: 45px;
+    height: 35px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: orange;
+    color: white;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-nav a {
+    color: black;
+    font-size: 16px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero-img {
+    background-image: url('../images/hero.webp');
+    background-size: cover;
+    background-position: center;
+    height: 774px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.hero-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Mini card section */
+.mini-card {
+    background-image: url('../images/back.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 170px;
+    max-width: 600px;
+    border-radius: 30px;
+    position: relative;
+    top: -80px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mini-card h1 {
+    font-size: 20px;
+    color: white;
+    padding: 20px 0;
+}
+
+.mini-btn button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(2, 168, 239);
+    color: black;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.mini-hovor:hover {
+    background-color: red;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* Car brand logos */
+.company-head {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    text-decoration: underline dotted;
+}
+
+.brand-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.company {
+    width: 150px;
+    margin: 20px;
+    text-align: center;
+}
+
+.company img {
+    max-width: 100%;
+    height: auto;
+}
+
+.second-hero-img img {
+    width: auto;
+    height: 500px;
+    border-radius: 50px;
+    margin-left: 95px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.branch-head h1 {
+    text-align: center;
+}
+
+.branch {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.branch :hover {
+    background-color: rgb(186, 103, 187);
+}
+
+.branch-name {
+    margin: 50px;
+    background-color: rgb(12, 155, 158);
+    text-decoration: none;
+    color: black;
+    padding: 13px;
+    border-radius: 25px;
+    text-align: center;
+    width: 200px;
+}
+
+.site-footer {
+    background: rgb(57, 56, 56);
+    color: white;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-container div {
+    flex: 1 1 200px;
+}
+
+.footer-left h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+    color: #ffdd57;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ffffff3b;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-inputs {
+        display: none;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        margin-bottom: 10px;
+    }
+
+    .sub-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgb(129, 210, 204);
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .branch-name {
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    .sub-nav.active {
+        display: flex;
+    }
+
+    .second-hero-img img {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: black;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .footer-contact {
+        display: none;
+    }
+
+    .hero-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .mini-card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .mini-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mini-btn button {
+        width: 80%;
+        margin: auto;
+    }
+
+    .company-head {
+        font-size: 24px;
+    }
+
+    .company {
+        width: 35%;
+    }
+}
