@@ -91,6 +91,8 @@ body {
     color: #333;
 }
 
+
+
 /* ================= CAR SECTION ================= */
 .item {
     display: flex;
@@ -178,6 +180,27 @@ body {
     background-color: #218838;
 }
 
+/* Filter Dropdown */
+.filter-container {
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter-container select:hover {
+    border-color: #999;
+}
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
     .box {
@@ -191,6 +214,13 @@ body {
     .hamburger {
         display: block;
     }
+
+    .nav-inputs {
+        width: 100%;
+        display: flex !important;
+        margin-top: 10px;
+    }
+
 
     .sub-nav {
         display: none;
